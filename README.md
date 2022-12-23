@@ -1,6 +1,13 @@
 # Document
 ## Introduction
-影片長度若為 10 分鐘以內，則其檔案大小上限為 650 MB。影片長度若長達 60 分鐘，則其檔案大小上限為 3.6 GB。
+When uploading video on instagram, it always decompresses video resolution. This repo wants to optimize the origin video resolution and 
+follows the Instagram video [compressing rules](#instragram-video-requirement), so that video maintain the same quality as it uploaded on instagram. 
+
+This repo using [open-mmlab/mmediting](https://github.com/open-mmlab/mmediting) to optimizes video resolution. 
+
+
+# ---------------------- Still in progress ----------------------
+
 
 ### instragram video requirement 
 1. 您可以上傳長寬比介於 1.91:1 與 9:16 的影片。
