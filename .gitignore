@@ -2,3 +2,7 @@ __pycache__/
 *.egg-info/
 *.mp4
 *.pth
+
+frontend/Documentation
+frontend/node_modules
+frontend/package-lock.json
