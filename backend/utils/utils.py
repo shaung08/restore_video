@@ -7,15 +7,15 @@ def check_folder(path):
         os.makedirs(path)
 
 def save_video(upload_file, filename, coordinate):
-    root = os.path.join("output", "tmp")
+    root = os.path.join("/home/restore_video/backend/output", "tmp")
     check_folder(root)
-    tmp_video = os.path.join("output", "tmp", "source.mp4")
+    tmp_video = os.path.join("/home/restore_video/backend/output", "tmp", "source.mp4")
     upload_file.save(tmp_video)
     
     os.system("python main.py -c configs/basicvsr_pp/basicvsr-pp_c64n7_8xb1-600k_reds4.py \
         -w basicvsr_plusplus_c64n7_8x1_600k_reds4_20210217-db622b2f.pth \
         -i %s \
-        -o output/output.mp4 \
+        -o /home/restore_video/backend/output/output.mp4 \
         --tmpf %s \
         --width %s \
         --height %s \

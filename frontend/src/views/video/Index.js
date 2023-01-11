@@ -23,7 +23,7 @@ function Bbox ({set, setFlag, croppedAreaPixels, videofile}) {
       <Button
       onClick={() => getCroppedvideo(croppedAreaPixels, videofile, setFlag)}
       >
-        optimize vidoe
+        optimize video
       </Button>,
       <Button
         onClick={downloadVideo}
