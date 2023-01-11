@@ -12,8 +12,8 @@ docker installation(recommand)
 1. pull and run docker images.
 note: set <frontned-port> to opend web service and <backend-port> to connect backend service.
 ```
-$ docker pull 
-$ docker run --it -p <frontned-port>:9010 -p <backend-port>:9000 bash
+$ docker pull qctuser/restore-video
+$ docker run --it -p <frontned-port>:9010 -p <backend-port>:9000 qctuser/restore-video bash
 ```
 2. Set <hostip> and <backend-port> in `/home/restore_video/frontend/src/utils/ip.js`
 ```
