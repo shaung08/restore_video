@@ -11,6 +11,8 @@
 ### 紀錄
 -r: 設定output的framerate，不改變影片時間長度
 -crf: 數值越大壓縮的越多，18~28是一個合理的範圍
+crop: crop=<width>:<height>:<x>:<y>
+
 ```
-$ ffmpeg -i input_Trim.mp4 -vcodec libx264  -crf 18 -r 24 output04.mp4
+$ ffmpeg -i input_Trim.mp4 -filter_complex "[0:v]crop=377:720:0:0[cropped]" -map "[cropped]" -vcodec libx264  -crf 18 -r 24 output04.mp4
 ```

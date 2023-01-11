@@ -1,6 +1,5 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import os
-
 import cv2
 import mmcv
 import numpy as np
@@ -11,10 +10,6 @@ from restore_video.backend.utils.convert_framerate import Video
 from restore_video.backend.mmedit.apis import init_model, restoration_video_inference
 from restore_video.backend.mmedit.utils import tensor2img
 
-tmp_video01, tmp_video02, fps = "tmp01.mp4", "tmp02.mp4", 30
-
-VIDEO_EXTENSIONS = ('.mp4', '.mov')
-
 def main():
     """Demo for video restoration models.
 
@@ -23,10 +18,15 @@ def main():
     compression, which lowers the visual quality. If you want actual quality,
     please save them as separate images (.png).
     """
-
+    tmp_video01, tmp_video02, fps = "source_tmp01.mp4", "source_tmp02.mp4", 24
+    VIDEO_EXTENSIONS = ('.mp4', '.mov')
     args = parse_args()
+    print(tmp_video01)
+
+    tmp_video01 = os.path.join(args.tmpf ,tmp_video01)
+    tmp_video02 = os.path.join(args.tmpf ,tmp_video02)
     video_ = Video(args.input, args.output, tmp_video01, tmp_video02, fps)
-    video_.convert_framerate()
+    video_.convert_framerate(args.x, args.y, args.width, args.height)
 
     if args.device < 0 or not torch.cuda.is_available():
         device = torch.device('cpu')

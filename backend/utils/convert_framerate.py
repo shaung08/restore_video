@@ -1,4 +1,3 @@
-import os
 import ffmpeg
 
 from moviepy.editor import *
@@ -11,10 +10,12 @@ class Video:
         self.tmp_02 = tmp_02
         self.fps = fps
 
-    def convert_framerate(self):
+    def convert_framerate(self, x, y, width, height):
         process = (ffmpeg.input(self.input_filename)
         .filter('fps', fps=self.fps, round='up')
-        .output(self.tmp_01, **{'c:v': 'libx264'}, crf=18))
+        .crop(x, y, width, height)
+        .output(self.tmp_01, **{'c:v': 'libx264'}, crf=18)
+        .overwrite_output())
         process.run()
 
     def combine_video(self):

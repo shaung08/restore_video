@@ -27,7 +27,12 @@ def parse_args():
     parser.add_argument('-c', '--config', help='test config file path')
     parser.add_argument('-w', '--weights', help='checkpoint file')
     parser.add_argument('-i', '--input', help='directory of the input video')
+    parser.add_argument('--tmpf', help='save temp path')
     parser.add_argument('-o', '--output', help='directory of the output video')
+    parser.add_argument("--width", help='crop image width')
+    parser.add_argument("--height", help='crop image height')
+    parser.add_argument("--x", help='crop x1 coordinate')
+    parser.add_argument("--y", help='crop y1 coordinate')
     parser.add_argument(
         '--start-idx',
         type=int,
