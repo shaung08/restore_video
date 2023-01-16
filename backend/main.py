@@ -21,7 +21,6 @@ def main():
     tmp_video01, tmp_video02, fps = "source_tmp01.mp4", "source_tmp02.mp4", 24
     VIDEO_EXTENSIONS = ('.mp4', '.mov')
     args = parse_args()
-    print(tmp_video01)
 
     tmp_video01 = os.path.join(args.tmpf ,tmp_video01)
     tmp_video02 = os.path.join(args.tmpf ,tmp_video02)

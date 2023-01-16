@@ -1,10 +1,11 @@
 # Document
 ## System: ubuntu18.04
 ## Introduction
-When uploading video on instagram, it always decompresses video resolution. This repo wants to optimize the origin video resolution and 
-follows the Instagram video [compressing rules](#instragram-video-requirement), so that video maintain the same quality as it uploaded on instagram. 
+When uploading video on instagram story, it always decompresses video resolution. Because it has some rules to follow when uploading video on it's community. 
 
-This repo using [open-mmlab/mmediting](https://github.com/open-mmlab/mmediting) to optimizes video resolution. 
+This repo wants to optimize the origin video resolution and follows the Instagram video [compressing rules](#instragram-video-requirement), so that video can keep the same quality as it upload on instagram. 
+
+This repo using [open-mmlab/mmediting](https://github.com/open-mmlab/mmediting) to optimize video resolution. 
 
 ## Installation
 ## docker installation
